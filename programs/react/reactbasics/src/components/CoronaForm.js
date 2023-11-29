@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 
 const CoronaForm = ({saveCorona}) => {
-
+    const [code,setCode]=useState()
     const [name,setName]=useState()
     const [total,setTotal]=useState()
     const [active,setActive]=useState()
@@ -11,9 +11,21 @@ const CoronaForm = ({saveCorona}) => {
     const addCorona=(e)=>{
         e.preventDefault()
 
-        let corona = {name,total,active,recovered,death}
+        let corona = {code,name,total,active,recovered,death}
         console.log("addCorona : ",corona)
+        reset()
         saveCorona(corona)
+        
+    }
+
+    const reset=()=>{
+      setCode(0)
+      setName('')
+      setTotal(0)
+      setActive(0)
+      setRecovered(0)
+      setDeath(0)
+
     }
 
 
@@ -22,6 +34,8 @@ const CoronaForm = ({saveCorona}) => {
       <h1>Corona Form</h1>
 
       <form onSubmit={addCorona}>
+        <label>Code</label>
+        <input type="text" value={code} onChange={(e)=>setCode(e.target.value)}/><br/>       
         <label>Name</label>
         <input type="text" value={name} onChange={(e)=>setName(e.target.value)}/><br/>
         <label>Total</label>

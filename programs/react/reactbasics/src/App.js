@@ -16,7 +16,7 @@ import {useState} from 'react';
 import CoronaForm from './components/CoronaForm';
 
 function App() {
-
+/**
   const [coronadata,setCoronadata]=useState([
     {
       code:1,
@@ -35,12 +35,21 @@ function App() {
       death:200
     }
   ])
-
+ */
+  const [coronadata,setCoronadata]=useState([])
+  
   const saveCoronaHandler=(corona)=>{
     console.log("corona data ",corona)
     setCoronadata([...coronadata,corona])
-
   }
+
+  const deleteCoronaHandler=(code)=>{
+    console.log("corona delete:: ",code)
+    let afterdel = coronadata.filter((corona)=>corona.code != code)
+    setCoronadata(afterdel)
+  }
+
+
   return (
     <div>
       {/*
@@ -58,10 +67,8 @@ function App() {
   */}
   
   <CoronaForm saveCorona={saveCoronaHandler}></CoronaForm>
-  <CoronaList data={coronadata}></CoronaList>
-
-  
-  
+  <CoronaList data={coronadata} delData= {deleteCoronaHandler}></CoronaList>
+ 
     </div>
   );
 }
