@@ -1,0 +1,112 @@
+Agenda
+1. Introduction to react
+2. Installation of node.js
+3. Create react project
+4. Walk through of the code
+
+Fullstack web application development
+
+Waterfall model
+SAD TMC
+MERN
+
+M - MongoDB
+E - Express
+R - React
+N - Node (JS server side run time environment)
+
+
+function add(n1,n2){
+ console.log('sum is ',(n1+n2))
+}
+add(10,20)
+addwithoutname = function (n1,n2){
+return n1+n2
+}
+res=addwithoutname(10,20)
+console.log("result is ",res)
+sumarrow= (n1,n2)=>n1+n2
+res =sumarrow(10,20)
+console.log('arrow function ',res)
+
+npm  - node package manager
+npx - node package executer
+
+npx creae-react-app <appname>
+
+npx create-react-app reactbasics
+
+cd reactbasics
+npm start
+
+index.html
+index.js
+App.js
+App.css
+
+1. create Header.js
+
+Extensions
+ES7+ React/Redux/React-Native snippets
+install  above extension
+
+create Content.js
+type rafce
+
+3. Simple Interest component
+
+p
+r
+t
+si=p*r*t/100
+
+hooks-useState hook
+useEffect
+
+- side effect
+
+front end ->back end
+web service
+REST Webservice - http
+SOAP webservice - soap
+
+free web service
+free fake webservice provider
+jsonplaceholder
+end point url
+<form method="">
+post,get,put,delete
+get -https://jsonplaceholder.typicode.com/users
+get -https://jsonplaceholder.typicode.com/users/1
+delete - https://jsonplaceholder.typicode.com/users/1
+
+Develop a covidtracker component using url
+https://api.covidtracking.com/v1/states/current.json
+
+Display data in a table as per the details given below
+Date State Positive, TotalTest hospitalized
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+

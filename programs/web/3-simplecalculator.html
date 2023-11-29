@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <label for="num1">Enter a number</label>
+    <input type="text" name="num1" id="num1"><br>
+    <label for="oper">Operator</label>
+    <select id="oper">
+        <option>+</option>
+        <option>-</option>
+    </select><br>
+    <label for="num2">Enter a number</label>
+    <input type="text" name="num2" id="num2"><br>
+    <button onclick="calculate()">Calculate</button><br>
+    <h2 id="result"></h2>   
+    <script>
+        function calculate(){
+            n1 = parseInt(document.getElementById("num1").value)
+            oper = document.getElementById("oper").value
+            n2 = parseInt(document.getElementById("num2").value)
+            console.log("n1 ",n1," oper ",oper,"n2 ",n2)   
+            res=""
+            if (oper=='+')
+                res = n1+" "+oper +" "+n2+"= "+(n1+n2)
+            else if (oper=='-')
+                res = n1+" "+oper +" "+n2+"= "+(n1-n2)
+            else
+                res = "invalid operator"
+
+                document.getElementById("result").innerHTML=res
+        }
+    </script>    
+</body>
+</html>

@@ -1,0 +1,75 @@
+MERN - MongoDB,Express,
+React and Node
+MEAN - MongoDB,Express,Angular and Node
+
+Fullstack Web Application Development
+Program,library,framework
+
+Desktop application and web application
+
+Front end - html,css,java script
+back end - java,servlets,jsp,jdbc
+Database - mysql,oracle,sybase,ms-sql
+webserver - Apache,Tomcat
+
+SDLC
+Phases - SAD TMC
+S - System Engineering - (Requirement)
+A - Analysis
+D - Design
+C - Coding
+T - Testing (Deployment)
+M - Maintenance
+
+HLML/CSS/JS
+Visual Studio Code
+
+1. Create following folders
+programs/web
+
+create 1-signup.html
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+Create a signup form having following elements
+
+
+SignUp
+Name  : <text box>
+Email : <text box>
+Mobile : <text box>
+Gender : Male ,Female (Radio button)
+Location : <drop down of cities>
+Qualification : Ug,Pg, Others (Check box)
+<Submit> button
+
+Apply css either using 
+inline,internal and external
+
+block level elements
+h1..h6
+div
+ul
+li
+in-line elements
+img,a
+display
+float
+
+1-2
+15
+4.50
+
+
+Java Script
+

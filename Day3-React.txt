@@ -1,0 +1,87 @@
+Recap
+React
+1. Downloaded node.js
+2. npx,npm
+3. Created a project
+npx create-react-app <appname>
+npx create-react-app reactbasics
+cd reactbasics
+code .
+npm start
+
+package.json
+index.html
+index.js
+app.js
+app.css
+
+
+restful web service
+
+1. Develop Users component
+by extracting data from
+https://jsonplaceholder.typicode.com/users
+Display following data in table dynamically
+name, email, city,phone,company name
+
+download and install postman
+https://www.postman.com/downloads/
+
+set up json-server
+
+npm install -g json-server
+
+create api folder under your program folder
+db.json
+
+json-server --watch db.json
+
+http://localhost:3000/customers
+
+json-server --watch db.json --port 5000
+
+
+Properties props
+
+mern-nhise-nov2023
+
+
+
+
+
+
+
+
+get (every record)- https://jsonplaceholder.typicode.com/todos
+
+get - https://jsonplaceholder.typicode.com/todos/1
+
+post -https://jsonplaceholder.typicode.com/todos
+
+body-raw-json
+
+{
+    "userId": 1,
+     "title": "test todo",
+    "completed": false
+}
+
+delete- 
+https://jsonplaceholder.typicode.com/todos/5
+
+put
+https://jsonplaceholder.typicode.com/todos/5
+body-raw-json
+
+{
+    "userId": 1,
+    "id": 5,
+    "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+    "completed": true
+}
+
+
+
+
+
+

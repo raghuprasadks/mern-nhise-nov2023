@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Master</title>
+</head>
+<body>
+    <h1>Product Master</h1>
+    <div>
+        <div>
+            <label for="code">Code</label>
+            <input type="number" name="code" id="code"><br>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name"><br>
+            <label for="supplier">Supplier</label>
+            <select id="supplier">
+                <option>Supplier 1</option>
+                <option>Supplier 2</option>
+            </select><br>
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price"><br>
+            <button onclick="addProduct()">Add Product</button>
+            </div>
+            <div>
+
+                <table id="tbldata"></table>
+            </div>
+            </div>
+            <script>
+                productsary=[]
+
+        function products(code,name,supplier,price){
+            this.code = code
+            this.name = name
+            this.supplier = supplier
+            this.price = price
+        }
+
+
+        function addProduct(){
+
+            code = document.getElementById("code").value
+            name = document.getElementById("name").value
+            supplier = document.getElementById("supplier").value
+            price = document.getElementById("price").value
+
+            prod=new products(code,name,supplier,price)
+            productsary.push(prod)
+            resetProduct()
+            displayproducts()
+        }
+
+        function displayproducts(){
+            data ='<tr><th>Code</th><th>Name</th><th>Supplier</th><th>Price</th><th>Delete</th></tr>'
+            for(i=0;i<productsary.length;i++){
+                prod = productsary[i]
+                data = data +`<tr><td>${prod.code}</td><td>${prod.name}</td><td>${prod.supplier}</td><td>${prod.price}</td><td><button onclick=deleteProduct(${prod.code})>Delete</button></td></tr>`
+            }
+            document.getElementById('tbldata').innerHTML=data
+        }
+        function deleteProduct(code){
+            productsary = productsary.filter((prod)=>prod.code != code)
+            displayproducts()
+        }
+        function resetProduct(){
+            document.getElementById("code").value=''
+            document.getElementById("name").value=''
+            document.getElementById("supplier").value=''
+            document.getElementById("price").value=''
+        }
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>

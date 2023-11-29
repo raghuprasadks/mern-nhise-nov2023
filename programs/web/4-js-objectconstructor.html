@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructor</title>
+</head>
+<body>
+
+    <h1>Object Constructor</h1>
+    <script>
+        product={
+            code:1,
+            name:"mobile",
+            price:48489
+        }
+
+
+        console.log("product ",product.code)
+
+
+        productsarr=[
+        {
+            code:1,
+            name:"mobile",
+            price:48489
+        },
+        {
+            code:2,
+            name:"laptop",
+            price:38489
+        },
+        {
+            code:2,
+            name:"laptop",
+            price:38489
+        }        
+        ]
+
+        function products(code,name,supplier,price){
+            this.code = code
+            this.name = name
+            this.supplier = supplier
+            this.price = price
+        }
+
+        p1 = new products(1,"mobile","samsung",33333)
+        p2 = new products(2,"laptop","hp",43333)
+        productsarr.push(p1)
+        productsarr.push(p2)      
+
+        for (i=0;i<productsarr.length;i++){
+           prod = productsarr[i]
+            console.log("code ",prod.code," name ",prod.name)
+        }
+
+    </script>
+    
+</body>
+</html>
