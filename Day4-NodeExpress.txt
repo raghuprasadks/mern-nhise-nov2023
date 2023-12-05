@@ -24,3 +24,21 @@ server.listen(port, hostname, () => {
 });
 
 node .\1-gettingstarted.js
+
+express.js
+
+Express 4.18.1
+Fast, unopinionated, minimalist web framework for Node.js
+
+
+1. create expressdemo folder
+2. open in visual studio code
+3. npm init
+it creates package.json
+package.json
+4. npm i express
+node_modules folder is created 
+and package.json is updated
+with express module as a dependency
+npm i -g nodemon
+
