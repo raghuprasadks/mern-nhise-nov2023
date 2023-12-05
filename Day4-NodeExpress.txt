@@ -42,3 +42,36 @@ and package.json is updated
 with express module as a dependency
 npm i -g nodemon
 
+to run program
+nodemon 1-gettingstarted.js
+
+middleware
+
+req- convert into json - response
+
+
+Assignment on express:
+Develop following api's for products displayed
+in amazon.
+Information to be captured
+id,name,desc,supplier,price
+
+API's
+
+method url
+get - http://localhost:8000/products
+get - http://localhost:8000/products/id
+post - http://localhost:8000/products
+delete - http://localhost:8000/products/id
+update - http://localhost:8000/products/id
+get - http://localhost:8000/productsbysupplier/supplier
+get - http://localhost:8000/productsbypricerange?min=minval&max=maxvalue
+
+
+
+
+
+
+
+
+

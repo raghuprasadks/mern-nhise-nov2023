@@ -1,3 +1,7 @@
 https://medium.com/@sanikakotgire2003/jwt-json-web-token-authentication-using-mern-stack-2ea59127d37d
 
 https://github.com/sanika6969/Project-2-JWT-Authentiction/tree/master
+
+https://blog.e-zest.com/basic-commands-for-mongodb
+
+https://www.geeksforgeeks.org/node-js-crud-operations-using-mongoose-and-mongodb-atlas/
