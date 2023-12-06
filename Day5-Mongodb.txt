@@ -1,0 +1,6 @@
+Agenda:
+1. End to end programming
+2. MongoDb installation and
+commands
+3. Mongoose library to 
+interface with mongodb

@@ -3,9 +3,7 @@ import React from 'react'
 const CoronaList = ({data,delData}) => {
    // let coronadata =props.data
 
-   // let deleteData = props.delData
-
-    
+   // let deleteData = props.delData    
     const deleteCorona=(code)=>{
         console.log('delete',code)
         delData(code)

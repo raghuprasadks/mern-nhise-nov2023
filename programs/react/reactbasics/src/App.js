@@ -14,6 +14,7 @@ import CoronaList from './components/CoronaList';
 
 import {useState} from 'react';
 import CoronaForm from './components/CoronaForm';
+import AsianGames from './components/AsianGames';
 
 function App() {
 /**
@@ -64,11 +65,12 @@ function App() {
       <CovidTracker></CovidTracker>
       <Users></Users>
       <CustomerForm></CustomerForm>
-  */}
-  
-  <CoronaForm saveCorona={saveCoronaHandler}></CoronaForm>
+       <CoronaForm saveCorona={saveCoronaHandler}></CoronaForm>
   <CoronaList data={coronadata} delData= {deleteCoronaHandler}></CoronaList>
  
+  */}
+  
+ <AsianGames></AsianGames>
     </div>
   );
 }

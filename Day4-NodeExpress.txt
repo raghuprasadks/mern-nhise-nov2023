@@ -67,6 +67,42 @@ update - http://localhost:8000/products/id
 get - http://localhost:8000/productsbysupplier/supplier
 get - http://localhost:8000/productsbypricerange?min=minval&max=maxvalue
 
+Router
+usermangement - api/users
+productmangement - api/products
+ordermanagement -- api/products
+suppliermangement -- api/suppliers
+inventorymanagement -- api/inventory
+
+middleware
+
+- request - date time
+
+npm i cors
+
+var express = require('express')
+var cors = require('cors')
+var app = express()
+
+app.use(cors())
+
+app.get('/products/:id', function (req, res, next) {
+  res.json({msg: 'This is CORS-enabled for all origins!'})
+})
+
+app.listen(80, function () {
+  console.log('CORS-enabled web server listening on port 80')
+})
+
+
+
+
+
+
+
+
+
+
 
 
 
