@@ -7,11 +7,23 @@ const SignUp = () => {
   const mobile = useRef(null)
   const password = useRef(null)
 
+  const url = "http://localhost:5000/api/user"
+
   const register = (e)=>{
 
     e.preventDefault()
     let user = {name:name.current.value,email:email.current.value,mobile:mobile.current.value,password:password.current.value}
     console.log('register ',user)
+
+    fetch(url,
+      {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(user)
+    }).then(response=>response.json())
+    .then(json=>console.log(json))
     
   }
 
