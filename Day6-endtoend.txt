@@ -24,3 +24,25 @@ npm i
 
 cd backend
 npm i
+
+Implement login functionality
+
+
+
+localstorage
+cookie
+JWT
+Json Web Token
+
+
+1. html,css,javascript,fetch ajax
+axios
+2. react
+3. node - asynchronous
+4. express - restapi
+5. No SQL - document database - mongodb
+6. mongo db with node - mongodb module mongoose-orm
+7.end to end
+
+
+
