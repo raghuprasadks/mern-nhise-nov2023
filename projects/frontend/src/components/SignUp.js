@@ -1,4 +1,5 @@
 import React,{useRef} from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
 
@@ -6,6 +7,7 @@ const SignUp = () => {
   const email = useRef(null)
   const mobile = useRef(null)
   const password = useRef(null)
+  const navigate = useNavigate()
 
   const url = "http://localhost:5000/api/user"
 
@@ -23,7 +25,10 @@ const SignUp = () => {
       },
       body: JSON.stringify(user)
     }).then(response=>response.json())
-    .then(json=>console.log(json))
+    .then(json=>{
+      console.log(json)
+      navigate("/login")
+    })
     
   }
 
