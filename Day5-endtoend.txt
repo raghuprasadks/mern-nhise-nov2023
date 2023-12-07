@@ -1,0 +1,16 @@
+Agenda:
+1. End to end programming
+front end + backend+db
+Routing
+Hooks - UseRef
+CSS
+Steps
+1. create projects folder
+2. cd projects
+3. npx create-react-app frontend
+npm i react-router-dom
+npm i -D react-router-dom
+2. Mini project
+3. Demonstration of flipkart kind
+of application
+4. Feedback and mcq

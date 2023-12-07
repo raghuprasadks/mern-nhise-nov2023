@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useRef} from 'react'
 
 const AsianGames = () => {
 
@@ -9,7 +9,8 @@ const AsianGames = () => {
     const [silver,setSilver]=useState()
     const [bronze,setBronze]=useState()
     const [total,setTotal]=useState()
-    const [medals,setMedals]=useState([])
+    //const [medals,setMedals]=useState([])
+    const medals =useRef([])
     const [message,setMessage]=useState()
 
     let url = 'http://localhost:8000/asiangames'
@@ -29,13 +30,36 @@ const AsianGames = () => {
         })
         .then(response=>response.json())
         .then(json=>{
-            if(json.data)
-                setMessage("Data saved sucessfully")        
+            if(json.data){
+                console.log('add medals .. response from server')
+                setMessage("Data saved sucessfully")
+                listMedals()
+            }
+                        
         }).catch((error)=>{
             setMessage("Unable to save data.Try later")
         })
 
     }
+
+    const listMedals=()=>
+    {
+        console.log("list medals...")
+        fetch(url)
+        .then(response=>response.json())
+        .then(json=>{
+            console.log('data from server ',json.data)
+            //setMedals(json.data)
+            medals.current=json.data
+            console.log("medals current :: ",medals.current)
+           //listMedals()            
+        }
+            )
+    }
+
+    useEffect(()=>{
+        listMedals()
+    },[])
 
     return (
     <>
@@ -56,9 +80,36 @@ const AsianGames = () => {
             <input type="number" value={bronze} onChange={(e)=>setBronze(e.target.value)}></input><br/>
             <label>Total</label><br/>
             <input type="number" value={total} onChange={(e)=>setTotal(e.target.value)}></input><br/>            
-            <input type="submit" value="Add Medals"/>
+            <button type="submit">Add Medals</button>
         </form> 
         <h2>{message}</h2>      
+    </div>
+    <div className='container'>
+        <h1>Metals Table</h1>
+        <table>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Gold</th>
+                <th>Silver</th>
+                <th>Bronze</th>
+                <th>Total</th>
+            </tr>
+        {
+            medals.current.map((medal)=>
+                <tr key={medal.code}>
+                <td>{medal.code}</td>
+                <td>{medal.name}</td>
+                <td>{medal.name}</td>
+                <td>{medal.gold}</td>
+                <td>{medal.silver}</td>
+                <td>{medal.bronze}</td>
+                <td>{medal.total}</td>
+            </tr>
+            )
+        }
+        </table>
     </div>
     </>
     

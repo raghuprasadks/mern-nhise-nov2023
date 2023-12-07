@@ -9,12 +9,14 @@ app.use(cors())
 app.use(express.json())
 
 app.post("/asiangames",(req,res)=>{
+    console.log('post')
     let asainmedal = req.body
     medallist.push(asainmedal)
     res.json({"statusCode":201,"data":asainmedal})
 })
 
 app.get("/asiangames",(req,res)=>{
+    console.log('get')
     res.json({"statusCode":200,"data":medallist})
 })
 

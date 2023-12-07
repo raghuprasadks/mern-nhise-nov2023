@@ -2,5 +2,170 @@ Agenda:
 1. End to end programming
 2. MongoDb installation and
 commands
+C:\Program Files\MongoDB\Server\6.0\bin
+mongosh
+
+mongoclient - mongodb compass
+no sql database - not only sql
+
+rdbms - relational dbms
+
+{
+	customers:[{ 
+	id:1,
+	name:'ravi',
+	mobile:393939,
+	email:'ravi@gmail.com'
+	address:[{id:1,type:'home',adress:"blr"},
+{id:2,type:'office',adress:"del"}
+]
+
+	}]
+}
+
+
+SAAS
+
+{
+  "_id": {
+    "$oid": "6570131396267a7a5b53cdd3"
+  },
+"name":"ravi",
+"email":"ravi@gmail.com",
+"mobile":9494994
+}
+
 3. Mongoose library to 
 interface with mongodb
+
+download mongodb community edition
+
+<React.StrictMode>
+    <App />
+  </React.StrictMode>
+
+Mongodb commands:
+1. show dbs
+to display databases
+2. use <databasename>
+switch to existingdatabase
+or creates new database
+3.db
+displays current database
+4.db.dropDatabase()
+drops the current database
+5. use <databasename>
+switches to the databasename
+6. db.createCollection("Employee")
+creates collection with the name
+Employee
+7. show collections
+displays the collections
+
+
+Assignment:
+
+1. create ecomdb
+2. create following collections
+product
+customer
+supplier
+3.Insert 3 documents for each collection
+product - code,name,desc,price
+customer - code,name,email,mobile,location,pincode
+supplier - code,name,contact,address,location,pincode
+4. Search for product with the name 'laptop'
+db.product.find({name:'laptop'})
+select * from product where name ='laptop'
+5. Search for products whose price is less than
+10000
+6. Update product with the name mobile price
+to 20000
+7. drop customers who stays in bengaluru
+
+Interfacing mongodb with node/express
+
+1. create mongodbdemo folder
+2. open it from visual studio code
+3. npm init
+creates package.json
+4. npm i mongodb
+5. Follow
+https://www.npmjs.com/package/mongodb
+
+const { MongoClient } = require('mongodb');
+// or as an es module:
+// import { MongoClient } from 'mongodb'
+
+// Connection URL
+const url = 'mongodb://localhost:27017';
+const client = new MongoClient(url);
+
+// Database Name
+const dbName = 'myProject';
+
+async function main() {
+  // Use connect method to connect to the server
+  await client.connect();
+  console.log('Connected successfully to server');
+  const db = client.db(dbName);
+  const collection = db.collection('documents');
+
+  // the following code examples can be pasted here...
+
+<>
+</>
+
+
+  return 'done.';
+}
+
+main()
+  .then(console.log)
+  .catch(console.error)
+  .finally(() => client.close());
+
+
+
+{
+    "_id": {
+      "$oid": "50ab0f8bbcf1bfe2536dc3f9"
+    },
+    "author": "machine",
+    "body": "Amendment I\n<p>Congress shall make no law respecting ...  ",
+    "comments": [
+        {
+            "author": "Santiago Dollins",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing...",
+            "email": "HvizfYVx@pKvLaagH.com"
+        },
+        {
+            "author": "Jaclyn Morado",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing...",
+            "email": "WpOUCpdD@hccdxJvT.com"
+        }
+        ...
+    ],
+    "date": {
+      "$date": {
+        "$numberLong": "1332804016000"
+      }
+    },
+    "permalink": "aRjNnLZkJkTyspAIoRGe",
+    "tags": [
+        "watchmaker",
+        "santa",
+        "xylophone",
+        "math",
+        "handsaw",
+        "dream",
+        "undershirt",
+        "dolphin",
+        "tanker",
+        "action"
+    ],
+    "title": "Bill of Rights"
+}
+
+
+
