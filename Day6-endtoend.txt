@@ -14,3 +14,13 @@ npm i -D react-router-dom
 3. Demonstration of flipkart kind
 of application
 4. Feedback and mcq
+
+
+git clone <gitrepo>
+git clone https://github.com/raghuprasadks/mern-nhise-nov2023.git
+cd projects
+cd frontend
+npm i
+
+cd backend
+npm i
